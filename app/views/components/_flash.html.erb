@@ -1,0 +1,10 @@
+<% if flash.any? %>
+    <% px = 20 %>
+    <% flash.each do |type, msg| %>
+        <div style="margin-top: <%= px %>px;" class="flash alert alert-<%=type%>">
+           <%= msg %>
+        </div>
+        <% px = 70 + px%>
+    <% end %>
+<% end %>
+<%# success, info, danger, warning %>
