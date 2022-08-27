@@ -9,6 +9,7 @@ import Turbolinks from "turbolinks"
 import * as ActiveStorage from "@rails/activestorage"
 import "channels"
 import "components/flash"
+import "components/side_top_nav"
 
 Rails.start()
 Turbolinks.start()
