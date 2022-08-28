@@ -13,5 +13,18 @@ Rails.application.routes.draw do
       unlocks: 'auth/users/unlocks',
       registrations: 'auth/users/registrations'
   }
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+  namespace :admin do
+    resources :dashboard, only: :index
+  end
+  namespace :users do
+    resources :dashboard, only: :index
+  end
+  authenticated :user, ->(u) { u.has_role?(:admin) } do
+    root to: "admin/dashboard#index", as: :admin_root
+  end
+  
+  authenticated :user, ->(u) { u.has_role?(:user) } do
+    root to: "users/dashboard#index", as: :user_root
+  end
+  root to: "users/dashboard#index"
 end

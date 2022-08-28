@@ -2,7 +2,7 @@
 .alert-notice { @extend .alert-success; }
 .flash{
     position: absolute;
-    z-index: 10;
+    z-index: 100;
     padding-right: 30px;
     padding-left: 30px;
     top: 0;

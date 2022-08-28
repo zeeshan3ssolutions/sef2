@@ -10,8 +10,8 @@
   </head>
   <body>
     <%= render "components/flash" %>
-    <%= render "components/side_top_nav/start_side_top_nav" if current_user %>
+    <%= render "components/side_top_nav/start_side_top_nav"%>
     <%= yield %>
-    <%= render "components/side_top_nav/end_side_top_nav" if current_user %>
+    <%= render "components/side_top_nav/end_side_top_nav"%>
   </body>
 </html>

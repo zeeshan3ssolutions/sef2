@@ -4,8 +4,9 @@
     --first-color: #000000;
     --first-color-light: #504e57;
     --white-color: #F7F6FB;
+    --top-header-color: #DDDDDD;
     --normal-font-size: 1rem;
-    --z-fixed: 100
+    --z-fixed: 10
 }
 
 *,
@@ -14,7 +15,7 @@
     box-sizing: border-box
 }
 
-body {
+.dublicate-body {
     position: relative;
     margin: var(--header-height) 0 0 0;
     padding: 0 1rem;
@@ -36,7 +37,7 @@ a {
     align-items: center;
     justify-content: space-between;
     padding: 0 1rem;
-    background-color: var(--white-color);
+    background-color: var(--top-header-color);
     z-index: var(--z-fixed);
     transition: .5s
 }
@@ -144,7 +145,7 @@ a {
 }
 
 @media screen and (min-width: 768px) {
-    body {
+    .dublicate-body {
         margin: calc(var(--header-height) + 1rem) 0 0 0;
         padding-left: calc(var(--nav-width) + 2rem)
     }
