@@ -6,6 +6,6 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-admin = User.new( name: 'admin', email: 'admin@admin.com', password: '123456')
+admin = User.new( name: 'admin', email: 'admin@socialbuttons.com', password: '123456', domain_url: "http://www.socialbuttons.com")
 admin.add_role :admin
-admin.save
+admin.save!
