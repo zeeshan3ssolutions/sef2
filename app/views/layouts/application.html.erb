@@ -2,7 +2,7 @@
 <html>
   <head>
     <title>SocialButtons</title>
-    <%# <meta name="viewport" content="width=device-width,initial-scale=1"> %>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -61,11 +61,11 @@
     .bg-primary {
         background-color: #00537e !important;
     }
-    .row > * {
+    /* .row > * {
         flex-shrink: 0;
         width: 100%;
         max-width: 100%;
-    }
+    } */
 
     .mt-5 {
         margin-top: 3rem !important;
@@ -210,7 +210,7 @@
 
         <div class="col-8">
 
-          <div class="float-end LogInV clearfix" style="text-align: right;margin: 12px 0 0 0;">
+          <div class="float-end LogInV clearfix" style="text-align:">
 
             <select name="ctl00$lstIdioma" onchange="" id="lstIdioma" class="form-select-sm">
               <option value="pt">Português</option>
