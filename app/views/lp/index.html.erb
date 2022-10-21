@@ -1,0 +1,112 @@
+<main role="main" class="flex-shrink-0  mb-5 " style="margin-top: 100px;">
+  <div class="" style="    padding: 0 5%;">
+
+
+
+    <div id="MainContent_divDados" class="card ">
+      <div class="card-header bg-primary text-light heading-font" style="">
+
+
+        <div class="float-start">
+          <span id="MainContent_lblCabProcesso">Document certification</span>
+        </div>
+        <div class="text-center">
+            <span id="MainContent_txtChave">2B4EFB9E-ECD4-4D72-90C5-CD703BB8C9A5</span>
+        </div>
+
+      </div>
+      <div class="card-body">
+        <span id="MainContent_Mensagem" class="mb-2"></span>
+
+
+
+        <div id="MainContent_pnlDados" class=" container-fluid" onkeypress="javascript:return WebForm_FireDefaultButton(event, 'MainContent_btnNovaPesquisa')">
+
+          <div class="row g-1 ">
+
+            <span id="MainContent_lblApelido" class="col-lg-2  col-md-4  col-form-label">Surname</span>
+            <div class="col-lg-4 col-md-8 ">
+              <span id="MainContent_txtApelido" class="form-control-plaintext ">HAMZA</span>
+            </div>
+            <span id="MainContent_lblNome" class="col-lg-2  col-md-4  col-form-label">Name</span>
+            <div class="col-lg-4  col-md-8 ">
+              <span id="MainContent_txtNome" class="form-control-plaintext ">MUHAMMAD</span>
+            </div>
+            <span id="MainContent_lblNacionalidade" class="col-lg-2  col-md-4  col-form-label">Nationality</span>
+            <div class="col-lg-4  col-md-8 ">
+              <span id="MainContent_txtNacionalidade" class="form-control-plaintext ">Pakistan</span>
+            </div>
+
+            <span id="MainContent_lblDataNascimento" class="col-lg-2 col-md-4 col-form-label">Birthdate</span>
+            <div class="col-lg-2 col-md-8">
+              <span id="MainContent_txtDataNascimento" class="form-control-plaintext ">23-08-1998</span>
+            </div>
+            <span id="MainContent_lblSexo" class="col-lg-1  col-md-4  col-form-label">Sex</span>
+            <div class="col-lg-1 col-md-8 ">
+              <span id="MainContent_txtSexo" class="form-control-plaintext ">Male</span>
+            </div>
+
+            <span id="MainContent_lblSituacao" class="col-lg-2  col-md-4  col-form-label">Status</span>
+            <div class="col-lg-4 col-md-8 ">
+              <span id="MainContent_txtSituacao" class="form-control-plaintext ">Processed</span>
+            </div>
+            <div class="col-lg-6 col-md-12">
+              <input type="submit" name="ctl00$MainContent$btnNovaPesquisa" value="Pesquisar outra chave de acesso" id="MainContent_btnNovaPesquisa" class="btn btn-primary  float-end ">
+            </div>
+          </div>
+          <hr>
+          <div class="alert alert-secondary">
+            <div class="row g-2">
+
+
+              <div class="col-lg-4 col-md-6 min-width-cl">
+                <span id="MainContent_lblNIF" class=" col-form-label">Tax ID Number (NIF)</span>
+
+                <span id="MainContent_txtNIF" class="form-control-plaintext ">311902707</span>
+              </div>
+              <div class="col-lg-4 col-md-6 min-width-cl">
+                <span id="MainContent_lblNISS" class="  col-form-label">Social Security Number (NISS)</span>
+
+                <span id="MainContent_txtNISS" class="form-control-plaintext ">12091598848</span>
+              </div>
+              <div class="col-lg-4 col-md-6 min-width-cl">
+
+                <span id="MainContent_lblNUS" class="  col-form-label">Health System Number (NUS)</span>
+
+                <span id="MainContent_txtNUS" class="form-control-plaintext ">897873114</span>
+
+
+              </div>
+            </div>
+          </div>
+
+
+        </div>
+
+      </div>
+    </div>
+
+
+
+    <script src="https://www.google.com/recaptcha/api.js?onload=renderRecaptcha&amp;render=explicit" async="" defer=""></script>
+
+
+    <script type="text/javascript">
+
+        jQuery('button[type="button"]').click(function (e) {
+            var message = 'Click na checkbox';
+            if (typeof (grecaptcha) != 'undefined') {
+                var response = grecaptcha.getResponse();
+                (response.length === 0) ? (message = 'Verificação mal sucedida!') : (message = 'Successo!');
+
+            }
+            jQuery('#lblMessage').html(message);
+            jQuery('#lblMessage').css('color', (message.toLowerCase() == 'sucesso!') ? "green" : "red");
+
+        });
+
+    </script>
+
+
+  </div>
+</main>
